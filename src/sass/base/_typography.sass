@@ -1,0 +1,25 @@
+.title
+	text-transform: uppercase
+	color: $white
+	letter-spacing: 1.44px
+	&-shape
+		position: relative
+		&:before
+			position: absolute
+			display: block
+			content: ''
+			top: -35px
+			left: 0
+			width: 28px
+			height: 13px
+			background-color: $blue
+			transform: skewY(-34deg)
+	&_xlg
+		font-size: $text-xlg
+		+font-family($proxi-900)
+		line-height: 1.21
+	&_lg
+		font-size: $text-lg
+		line-height: 1.21
+	&.color-darkblue
+		color: $darkblue

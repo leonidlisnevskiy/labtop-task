@@ -1,0 +1,70 @@
+---
+title: Index page
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	<section class="services">
+		<div class="inner">
+			<h2 class="title title-shape title_xlg">SOMETHING<br> AS A SERVICE</h2>
+
+			<div class="items">
+				{% for item in [
+					{
+						title: 'Digital identity',
+						icon: 'circle',
+						text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+					},
+					{
+						title: 'Trust Score',
+						icon: 'graph',
+						text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+					},
+					{
+						title: 'Search engine',
+						icon: 'search',
+						text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+					},
+					{
+						title: 'User friendly',
+						icon: 'smile',
+						text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+					}
+					]%}
+				<div class="item">
+					<div class="item__inner">
+						<div class="item__icon">{{mixins.icon(item.icon)}}</div>
+						<div class="item__title">{{item.title}}</div>
+						<div class="item__text">{{item.text}}</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+			<!-- END .items -->
+		</div>
+	</section>
+	<!-- END .services -->
+
+
+	<section class="our">
+		<div class="inner">
+
+			<div class="our__wrapper">
+				<div class="our__infoblock">
+					<h3 class="title title_lg">OUR<br>LIGHTPAPER</h3>
+					<div class="our__desc">Team is currently working on all its documents.</div>
+
+					<div class="our__field">
+						<a href="#" class="btn">DOWNLOAD</a>
+					</div>
+				</div>
+
+				<img src="./img/book-pic.png" alt="" class="book-pic">
+			</div>
+
+			<h2 class="title title-shape title_xlg color-darkblue">SOMETHING<br> SEARCH PRODUCT</h2>
+		</div>
+	</section>
+	<!-- END .our -->
+{% endblock %}
